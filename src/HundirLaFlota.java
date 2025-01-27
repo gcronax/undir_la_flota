@@ -1,12 +1,13 @@
 public class HundirLaFlota {
     public static void main(String[] args) {
-        do{
+        Tablero.crearPartida();
 
+        do{
 
             Tablero.tiro(
                     InterfazUsuario.inputFila(),
             InterfazUsuario.inputColumna());
-
+            System.out.println(Tablero.barcos.get(1));
 
         }while (!(Tablero.comprobarFinPartida()));
     }
