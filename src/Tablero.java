@@ -14,6 +14,7 @@ public class Tablero {
         }
     }
 
+
     public static void mostrarTablero() {
         int count=1;
 

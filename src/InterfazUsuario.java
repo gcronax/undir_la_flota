@@ -7,9 +7,9 @@ public class InterfazUsuario {
         System.out.print("dame la fila: ");
         return scan.nextInt();
     }
-    public static int inputColumna(){
+    public static String inputColumna(){
         System.out.print("dame la columna: ");
-        return scan.nextInt();
+        return scan.next();
     }
 
 }

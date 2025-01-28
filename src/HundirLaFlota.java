@@ -20,13 +20,46 @@ public class HundirLaFlota {
                 );
             }
             Tablero.mostrarEstadistica();
-            Tablero.tiro(
-                    InterfazUsuario.inputFila(),
-            InterfazUsuario.inputColumna());
+
+            int fila=InterfazUsuario.inputFila();
+            String columna=InterfazUsuario.inputColumna();
+            int columnaint = 0;
+            switch (columna){
+                case "A":
+                    columnaint=1;
+                    break;
+                case "B":
+                    columnaint=2;
+                    break;
+                case "C":
+                    columnaint=3;
+                    break;
+                case "D":
+                    columnaint=4;
+                    break;
+                case "E":
+                    columnaint=5;
+                    break;
+                case "F":
+                    columnaint=6;
+                    break;
+                case "G":
+                    columnaint=7;
+                    break;
+                case "H":
+                    columnaint=8;
+                    break;
+                default:
+                    break;
+
+            }
+
+
+            Tablero.tiro(fila,columnaint);
 
         }while (!(Tablero.comprobarFinPartida()));
+
+        System.out.println("has ganado");
     }
-
-
 
 }
