@@ -19,7 +19,7 @@ public class Tablero {
 
 
         }while (barcos.size()!=10);
-        System.out.println(barcos.size());
+        //System.out.println(barcos.size());
 
     }
 
