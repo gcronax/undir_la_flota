@@ -52,6 +52,8 @@ public class HundirLaFlota {
                     columnaint=8;
                     break;
                 default:
+                    System.out.println("Da un valor valido");
+                    columna=InterfazUsuario.inputColumna();
                     break;
 
             }
