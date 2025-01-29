@@ -6,6 +6,7 @@ public class Tablero {
     public static int columna;
     public static int[][] arrayTablero= new int[8][8];
     public static Map<Integer, List<Integer>> barcos = new HashMap<Integer, List<Integer>>();
+    private static int count=0;
     public static void crearPartida(){
         int i=1;
         do {
@@ -48,6 +49,7 @@ public class Tablero {
 
 
     public static void tiro(int fila, int columna){
+        count++;
         Tablero.fila =fila;
         Tablero.columna=columna;
         //System.out.println(barcos);
@@ -72,9 +74,17 @@ public class Tablero {
 
     }
     public static void mostrarEstadistica(){
-        System.out.println("Has hundido "+(10- barcos.size())+" barcos.");
+        System.out.println(count+" intentos y  faltan "+(barcos.size())+" barcos.");
     }
     public static boolean comprobarFinPartida(){
         return barcos.isEmpty();
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }
