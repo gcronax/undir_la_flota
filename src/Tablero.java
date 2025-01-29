@@ -22,8 +22,6 @@ public class Tablero {
         //System.out.println(barcos.size());
 
     }
-
-
     public static void mostrarTablero() {
         int count=1;
 
