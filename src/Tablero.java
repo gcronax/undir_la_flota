@@ -36,11 +36,15 @@ public class Tablero {
         for (int[] printAux:copiaTablero){
             System.out.println((count++)+" "+Arrays.toString(printAux)
                     .replaceAll("0","~")
-                    .replaceAll("1","X")
                     .replaceAll(",","")
                     .replaceAll("]","")
                     .replaceAll("\\[","")
                     .replaceAll("2","@")
+                    .replaceAll("5","~")
+                    .replaceAll("1","~")
+
+
+
             );
         }
     }
@@ -49,8 +53,10 @@ public class Tablero {
     public static void tiro(int fila, int columna){
         Tablero.fila =fila;
         Tablero.columna=columna;
-        System.out.println(barcos);
+        //System.out.println(barcos);
         Integer aux=0;
+        arrayTablero[fila-1][columna-1]= 5;
+
         for (Integer clave : barcos.keySet()){
             if (barcos.get(clave).equals(Arrays.asList(fila, columna))){
                 System.out.println("X Barco Hundido X");
@@ -65,7 +71,7 @@ public class Tablero {
             System.out.println("AGUA CAMPEÓN ;)!");
         }
 
-        System.out.println(barcos);
+        //System.out.println(barcos);
 
     }
     public static void mostrarEstadistica(){

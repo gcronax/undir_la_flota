@@ -12,11 +12,13 @@ public class HundirLaFlota {
             for (int[] aux:Tablero.arrayTablero){
                 System.out.println((count++)+" "+Arrays.toString(aux)
                         .replaceAll("0","~")
-                        .replaceAll("1","X")
                         .replaceAll(",","")
                         .replaceAll("]","")
                         .replaceAll("\\[","")
                         .replaceAll("2","~")
+                        .replaceAll("1","X")
+                        .replaceAll("5","o")
+
                 );
             }
             Tablero.mostrarEstadistica();
