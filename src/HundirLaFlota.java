@@ -1,3 +1,4 @@
+import java.lang.management.ManagementFactory;
 import java.util.Arrays;
 
 public class HundirLaFlota {
@@ -5,7 +6,9 @@ public class HundirLaFlota {
         Tablero.crearPartida();
 
         do{
-            Tablero.mostrarTablero();
+            if (ManagementFactory.getRuntimeMXBean().getInputArguments().toString().contains("-agentlib:jdwp")){
+                Tablero.mostrarTablero();
+            }
             int count=1;
             System.out.println("_________________________");
             System.out.println("   A  B  C  D  E  F  G  H");
