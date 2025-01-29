@@ -4,12 +4,12 @@ public class InterfazUsuario {
     static Scanner scan =new Scanner(System.in);
 
     public static int inputFila(){
-        System.out.print("dame la fila: ");
+        System.out.print("Dame la fila: (1-8) -> ");
         return scan.nextInt();
     }
     public static String inputColumna(){
-        System.out.print("dame la columna: ");
-        return scan.next();
+        System.out.print("Dame la columna (A-H) -> ");
+        return scan.next().toUpperCase();
     }
 
 }

@@ -59,7 +59,7 @@ public class HundirLaFlota {
 
         }while (!(Tablero.comprobarFinPartida()));
 
-        System.out.println("has ganado");
+        System.out.println("Has Ganado! :D");
     }
 
 }
