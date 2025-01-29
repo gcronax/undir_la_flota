@@ -5,7 +5,12 @@ public class InterfazUsuario {
 
     public static int inputFila(){
         System.out.print("Dame la fila: (1-8) -> ");
-        return scan.nextInt();
+        int aux=scan.nextInt();
+        if (aux<1||aux>8){
+            System.out.println("Da un valor valido");
+            return inputFila();
+        }
+        return aux;
     }
     public static String inputColumna(){
         System.out.print("Dame la columna (A-H) -> ");
