@@ -5,7 +5,7 @@ public class HundirLaFlota {
         Tablero.crearPartida();
 
         do{
-            Tablero.mostrarTablero();
+            //Tablero.mostrarTablero();
             int count=1;
             System.out.println("_________________");
             System.out.println("  A B C D E F G H");
