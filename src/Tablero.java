@@ -32,17 +32,16 @@ public class Tablero {
         for ( List<Integer> valor : barcos.values()){
             copiaTablero[valor.getFirst()-1][valor.getLast()-1]=2;
         }
-        System.out.println("  A B C D E F G H");
+        System.out.println("   A  B  C  D  E  F  G  H");
         for (int[] printAux:copiaTablero){
             System.out.println((count++)+" "+Arrays.toString(printAux)
-                    .replaceAll("0","~")
+                    .replaceAll("0","\uD83C\uDF0A")
                     .replaceAll(",","")
                     .replaceAll("]","")
                     .replaceAll("\\[","")
-                    .replaceAll("2","@")
-                    .replaceAll("5","~")
-                    .replaceAll("1","~")
-
+                    .replaceAll("2","⛵")
+                    .replaceAll("1","⛵")
+                    .replaceAll("5","\uD83C\uDF0A")
 
 
             );

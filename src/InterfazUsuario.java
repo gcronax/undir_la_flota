@@ -12,9 +12,15 @@ public class InterfazUsuario {
         }
         return aux;
     }
-    public static String inputColumna(){
+    public static char inputColumna(){
         System.out.print("Dame la columna (A-H) -> ");
-        return scan.next().toUpperCase();
+        char aux=scan.next().charAt(0);
+
+        if (aux < 'A' || aux > 'H'){
+            System.out.println("Da un valor valido");
+            return inputColumna();
+        }
+        return aux;
     }
 
 }

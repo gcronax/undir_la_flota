@@ -5,55 +5,54 @@ public class HundirLaFlota {
         Tablero.crearPartida();
 
         do{
-            //Tablero.mostrarTablero();
+            Tablero.mostrarTablero();
             int count=1;
-            System.out.println("_________________");
-            System.out.println("  A B C D E F G H");
+            System.out.println("_________________________");
+            System.out.println("   A  B  C  D  E  F  G  H");
             for (int[] aux:Tablero.arrayTablero){
                 System.out.println((count++)+" "+Arrays.toString(aux)
-                        .replaceAll("0","~")
+                        .replaceAll("0","\uD83C\uDF0A")
                         .replaceAll(",","")
                         .replaceAll("]","")
                         .replaceAll("\\[","")
-                        .replaceAll("2","~")
-                        .replaceAll("1","X")
-                        .replaceAll("5","o")
+                        .replaceAll("2","\uD83C\uDF0A")
+                        .replaceAll("1","❌")
+                        .replaceAll("5","⭕")
 
                 );
             }
             Tablero.mostrarEstadistica();
 
             int fila=InterfazUsuario.inputFila();
-            String columna=InterfazUsuario.inputColumna();
+            char columna=InterfazUsuario.inputColumna();
             int columnaint = 0;
             switch (columna){
-                case "A":
+                case 'A':
                     columnaint=1;
                     break;
-                case "B":
+                case 'B':
                     columnaint=2;
                     break;
-                case "C":
+                case 'C':
                     columnaint=3;
                     break;
-                case "D":
+                case 'D':
                     columnaint=4;
                     break;
-                case "E":
+                case 'E':
                     columnaint=5;
                     break;
-                case "F":
+                case 'F':
                     columnaint=6;
                     break;
-                case "G":
+                case 'G':
                     columnaint=7;
                     break;
-                case "H":
+                case 'H':
                     columnaint=8;
                     break;
                 default:
                     System.out.println("Da un valor valido");
-                    columna=InterfazUsuario.inputColumna();
                     break;
 
             }
